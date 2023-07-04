@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, Client } = require("discord.js");
 const fs = require("fs");
+const { stringify } = require("querystring");
 
 // [讀檔] -> [解析] -> [做事]  -> [回應] -> [存檔]
 
