@@ -1,6 +1,6 @@
 const { Configuration, OpenAIApi } = require("openai");
-
-require("dotenv").config();
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+// require("dotenv").config();
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -25,7 +25,7 @@ module.exports = {
                 },
             ],
         });
-        const responseMessage = '> ' + interaction.options.getString('input') + '\n' + response.data.choices[0].message.content;​
+        const responseMessage = '> ' + interaction.options.getString('input') + '\n' + response.data.choices[0].message.content;
         interaction.editReply(responseMessage);
     },
 };
